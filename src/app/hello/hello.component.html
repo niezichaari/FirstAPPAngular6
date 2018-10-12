@@ -3,3 +3,15 @@
 </p>
 <input type="text" value="{{myVariable}}" [disabled]="myDisabledValue" />
 <button (click)="myCalledFunction()">Hey there</button>
+<p>
+    <input type="text" [(ngModel)]="twoway" />
+
+  This is a twoway value
+</p>
+{{twoway}}
+<p>
+    <input type="text" [value]="threeway" (input)="updateValue($event)" />
+
+  This is a threeway value
+</p>
+{{threeway}}

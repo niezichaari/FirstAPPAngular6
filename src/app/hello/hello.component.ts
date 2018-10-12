@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent implements OnInit {
-
+  threeway="test"
   myvar ="testing biaaatch"
     i=0
     myDisabledValue = false
@@ -29,6 +29,11 @@ export class HelloComponent implements OnInit {
  console.log(this.myDisabledValue);
  console.log(`${this.myDisabledValue}`);
 
+  }
+  updateValue(e){
+    this.threeway = e.target.value
+    console.log(e.target.value);
+    
   }
 
 }
